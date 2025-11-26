@@ -11,12 +11,12 @@ The target packages are specified in a text file containing one or more lines, e
 You can execute the tool using the following command...
 
 ```
-npm run start -- [path-and-filename-of-packages-file] [search-directory]
+npm run start -- [packages-file] [search-directory]
 ```
 
- - [path-and-filename-of-packages-file] is the path/filename of the file containing a list of the packages you want to search for.
+ - [packages-file] is the path and filename of the file containing the packages you want to search for.
 
- - [search-directory] is the path to a directory containing the projects you wish to search.
+ - [search-directory] is the path of the directory containing the projects you wish to search.
 
 So, for example - if you had a file named `c:\dependencies.txt` that looked like this (note the malformed first line that will be ignored)...
 
