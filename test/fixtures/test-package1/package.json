@@ -1,0 +1,17 @@
+{
+  "name": "test-package1",
+  "version": "1.0.0",
+  "description": "A test fixture package",
+  "homepage": "https://github.com/wmfs/dependency-search#readme",
+  "devDependencies": {
+    "test-package-sat": "1.0.0",
+    "test-package-sun": "1.0.0"
+  },
+  "dependencies": {
+    "test-package-mon": "1.0.0",
+    "test-package-tue": "1.0.0",
+    "test-package-wed": "2.5.0",
+    "test-package-thu": "1.0.0",
+    "test-package-fri": "1.0.0"
+  }
+}
