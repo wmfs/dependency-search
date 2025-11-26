@@ -16,9 +16,9 @@ You can execute the tool using the following command...
 npm run start -- [packages-file] [search-directory]
 ```
 
- - [packages-file] is the path and filename of the file containing the packages you want to search for.
+ - [packages-file] is the path and filename of the file containing the packages you want to search for (required).
 
- - [search-directory] is the path of the directory containing the projects you wish to search.
+ - [search-directory] is the path of the directory containing the projects you wish to search (required).
 
 So, for example - if you had a file named `c:\dependencies.txt` that looked like this (note the malformed first line that will be ignored)...
 
