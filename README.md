@@ -6,6 +6,8 @@ It searches a directory (and any descendant directories) for package.json files,
 
 The target packages are specified in a text file containing one or more lines, each consisting of a package name, followed by an '@', followed by the version you're looking for (so for example 'chai@6.2.1').
 
+Do note that all files are assumed to use UTF-8 encoding.
+
 ## Usage
 
 You can execute the tool using the following command...
@@ -43,7 +45,7 @@ You will get output looking something like this...
 packages file: c:\dependencies.txt
   - file exists
   - file is readable
-  - ignoring entry (line 1): hello
+  - ignoring malformed package: hello
   - 2 target packages found
 
 search directory: c:\projects
