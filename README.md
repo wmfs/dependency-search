@@ -1,6 +1,6 @@
 # Dependency Search &middot; [![npm](https://img.shields.io/npm/v/npm.svg?style=flat-square)](https://www.npmjs.com/package/npm) [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square)](https://github.com/your/your-project/blob/master/LICENSE) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-blue.svg)](https://standardjs.com)
 
-A tool that identifies projects in a directory that make use of (directly or indirectly) one or more specified packages (with specific versions).
+A tool that identifies node.js projects that make use of (directly or indirectly) one or more user specifiable packages (each with a specific version).
 
 It searches a directory (and any descendant directories) for package.json files, and then examines the dependencies/devDependencies sections for target packages.
 
