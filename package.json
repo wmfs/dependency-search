@@ -1,0 +1,24 @@
+{
+  "name": "dependency-search",
+  "version": "1.0.0",
+  "description": "A tool that recursively scans directories to look for projects that contain package.json files with specific versions of dependencies",
+  "homepage": "https://github.com/wmfs/dependency-search#readme",
+  "main": "node ./lib/index.js",
+  "scripts": {
+    "start": "node ./lib/index.js",
+    "lint": "standard"
+  },
+  "keywords": [],
+  "author": "Jasvinder Bahra",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/wmfs/dependency-search.git"
+  },
+  "devDependencies": {
+    "standard": "17.1.2"
+  },
+  "dependencies": {
+    "glob": "13.0.0"
+  }
+}

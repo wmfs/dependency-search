@@ -1,0 +1,64 @@
+# Dependency Search &middot; [![npm](https://img.shields.io/npm/v/npm.svg?style=flat-square)](https://www.npmjs.com/package/npm) [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square)](https://github.com/your/your-project/blob/master/LICENSE) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-blue.svg)](https://standardjs.com)
+
+A tool that searches a directory (and any descendant directories) for package.json files, and then examines those files dependencies/devDependencies sections for one or more target packages.
+
+## Usage
+
+You can execute the tool using the following command...
+
+```
+npm run start -- [path-and-filename-of-dependencies-file] [search-directory]
+```
+
+Where [path-and-filename-of-dependencies-file] is a file containing the list of dependencies you want to search for. This file should consist of one or more lines, each consisting of a package name, followed by an '@', followed by the version you're looking for.
+
+The [search-directory] is a path to a directory containing the projects you wish to search.
+
+So, for example - if you had a file named `c:\dependencies.txt` that looked like this (note that the first line is malformed - it does not end with an '@' and a version - and so will be ignored)...
+
+```
+hello
+chai@6.2.1
+```
+
+...and your projects were under the `c:\projects` directory. If you execute the following command...
+
+```
+npm run start -- c:\dependencies.txt c:\projects
+```
+
+You will get output looking something like this...
+
+```
+"C:\Program Files\nodejs\npm.cmd" run start -- c:\dependencies.txt c:\projects
+
+> dependency-search@1.0.0 start
+> node ./lib/index.js c:\dependencies.txt c:\projects
+
+dependencies file: c:\dependencies.txt
+  - file exists
+  - file is readable
+  - ignoring entry (line 1): hello
+  - 1094 target dependencies found
+
+search directory: c:\projects
+  - directory exists
+  - directory is readable
+
+Searching for package.json files under c:\projects...
+  - 26582 package.json files found
+
+searching for target dependencies...
+  - unable to parse c:\projects\test-package1\node_modules\@quasar\app-webpack\templates\capacitor\package.json (NOTE: this file will not be checked!)
+  - unable to parse c:\projects\test-package1\node_modules\resolve\test\resolver\malformed_package_json\package.json (NOTE: this file will not be checked!)
+  - unable to parse c:\projects\test-package1\node_modules\resolve\test\resolver\malformed_package_json\package.json (NOTE: this file will not be checked!)
+  - target dependency chai@6.2.1 found in c:\projects\dependency-search\package.json
+  - number of package.json files found with a target dependencies, but with a different version: 1577
+  - number of package.json files found with a target dependencies of the specified version: 1
+
+Process finished with exit code 0
+```
+
+## Licensing
+
+This project uses the MIT license (see https://spdx.org/licenses/MIT.html).
