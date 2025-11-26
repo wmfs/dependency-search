@@ -1,7 +1,7 @@
 {
   "name": "dependency-search",
   "version": "1.0.0",
-  "description": "A tool that recursively scans directories to look for projects that contain package.json files with specific versions of dependencies",
+  "description": "A tool that identifies node.js projects that make use of (directly or indirectly) one or more user specifiable packages.",
   "homepage": "https://github.com/wmfs/dependency-search#readme",
   "main": "node ./lib/index.js",
   "scripts": {
