@@ -1,6 +1,5 @@
 /* eslint-env mocha */
 
-const process = require('node:process')
 const path = require('node:path')
 
 const chai = require('chai')
@@ -9,8 +8,6 @@ const expect = chai.expect
 const indexerService = require('../lib/indexer-service')
 
 describe('indexer service tests', function () {
-  this.timeout(process.env.TIMEOUT || 10000)
-
   const fixturesPath = path.join(__dirname, 'fixtures')
 
   it('search for non-existent package', () => {
