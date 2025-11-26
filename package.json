@@ -9,7 +9,10 @@
     "test": "nyc mocha",
     "lint": "standard"
   },
-  "keywords": [],
+  "keywords": [
+    "node.js",
+    "dependencies"
+  ],
   "author": "Jasvinder Bahra",
   "license": "MIT",
   "repository": {
