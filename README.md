@@ -10,15 +10,16 @@ You can execute the tool using the following command...
 npm run start -- [path-and-filename-of-dependencies-file] [search-directory]
 ```
 
-Where [path-and-filename-of-dependencies-file] is a file containing the list of dependencies you want to search for. This file should consist of one or more lines, each consisting of a package name, followed by an '@', followed by the version you're looking for.
+ - [path-and-filename-of-dependencies-file] is the path/filename of a file containing a list of dependencies you want to search for. This file should consist of one or more lines, each consisting of a package name, followed by an '@', followed by the version you're looking for.
 
-The [search-directory] is a path to a directory containing the projects you wish to search.
+ - [search-directory] is the path to a directory containing the projects you wish to search.
 
-So, for example - if you had a file named `c:\dependencies.txt` that looked like this (note that the first line is malformed - it does not end with an '@' and a version - and so will be ignored)...
+So, for example - if you had a file named `c:\dependencies.txt` that looked like this (note the malformed first line that will be ignored)...
 
 ```
 hello
 chai@6.2.1
+@semantic-release/git@10.0.1
 ```
 
 ...and your projects were under the `c:\projects` directory. If you execute the following command...
@@ -39,7 +40,7 @@ dependencies file: c:\dependencies.txt
   - file exists
   - file is readable
   - ignoring entry (line 1): hello
-  - 1094 target dependencies found
+  - 2 target dependencies found
 
 search directory: c:\projects
   - directory exists
