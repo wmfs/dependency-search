@@ -4,15 +4,17 @@ A tool that identifies node.js projects that make use of (directly or indirectly
 
 It searches a directory (and any descendant directories) for package.json files, and then examines the dependencies/devDependencies sections for target packages.
 
+The target packages are specified in a text file containing one or more lines, each consisting of a package name, followed by an '@', followed by the version you're looking for (so for example 'chai@6.2.1').
+
 ## Usage
 
 You can execute the tool using the following command...
 
 ```
-npm run start -- [path-and-filename-of-dependencies-file] [search-directory]
+npm run start -- [path-and-filename-of-packages-file] [search-directory]
 ```
 
- - [path-and-filename-of-dependencies-file] is the path/filename of a file containing a list of dependencies you want to search for. This file should consist of one or more lines, each consisting of a package name, followed by an '@', followed by the version you're looking for.
+ - [path-and-filename-of-packages-file] is the path/filename of the file containing a list of the packages you want to search for.
 
  - [search-directory] is the path to a directory containing the projects you wish to search.
 
@@ -38,11 +40,11 @@ You will get output looking something like this...
 > dependency-search@1.0.0 start
 > node ./lib/index.js c:\dependencies.txt c:\projects
 
-dependencies file: c:\dependencies.txt
+packages file: c:\dependencies.txt
   - file exists
   - file is readable
   - ignoring entry (line 1): hello
-  - 2 target dependencies found
+  - 2 target packages found
 
 search directory: c:\projects
   - directory exists
@@ -51,13 +53,13 @@ search directory: c:\projects
 Searching for package.json files under c:\projects...
   - 26582 package.json files found
 
-searching for target dependencies...
+searching for target packages...
   - unable to parse c:\projects\test-package1\node_modules\@quasar\app-webpack\templates\capacitor\package.json (NOTE: this file will not be checked!)
   - unable to parse c:\projects\test-package1\node_modules\resolve\test\resolver\malformed_package_json\package.json (NOTE: this file will not be checked!)
   - unable to parse c:\projects\test-package1\node_modules\resolve\test\resolver\malformed_package_json\package.json (NOTE: this file will not be checked!)
-  - target dependency chai@6.2.1 found in c:\projects\dependency-search\package.json
-  - number of package.json files found with a target dependency, but with a different version: 1577
-  - number of package.json files found with a target dependency of the specified version: 1
+  - target package chai@6.2.1 found in c:\projects\dependency-search\package.json
+  - number of package.json files found with a target package, but with a different version: 1577
+  - number of package.json files found with a target package of the specified version: 1
 
 Process finished with exit code 0
 ```
