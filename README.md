@@ -56,8 +56,8 @@ searching for target dependencies...
   - unable to parse c:\projects\test-package1\node_modules\resolve\test\resolver\malformed_package_json\package.json (NOTE: this file will not be checked!)
   - unable to parse c:\projects\test-package1\node_modules\resolve\test\resolver\malformed_package_json\package.json (NOTE: this file will not be checked!)
   - target dependency chai@6.2.1 found in c:\projects\dependency-search\package.json
-  - number of package.json files found with a target dependencies, but with a different version: 1577
-  - number of package.json files found with a target dependencies of the specified version: 1
+  - number of package.json files found with a target dependency, but with a different version: 1577
+  - number of package.json files found with a target dependency of the specified version: 1
 
 Process finished with exit code 0
 ```
