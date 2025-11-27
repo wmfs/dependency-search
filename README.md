@@ -19,6 +19,7 @@ git clone https://github.com/wmfs/dependency-search.git
 Then fetch the required dependencies using npm...
 
 ```
+cd dependency-search
 npm i
 ```
 
