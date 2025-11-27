@@ -4,7 +4,7 @@ A tool that identifies node.js projects that make use of (directly or indirectly
 
 It searches a directory (and any descendant directories) for package.json files, and then examines the dependencies/devDependencies sections for target packages.
 
-The target packages are specified in a text file containing one or more lines, each consisting of a package name, followed by an '@', followed by the version you're looking for (so for example 'chai@6.2.1').
+The target packages are specified in a text file containing one or more lines, each consisting of a package name (as in the name in a package.json's dependencies/devDependencies block), followed by an '@', followed by the version you're looking for (so for example 'chai@6.2.1').  Be aware that a minimum of one well-formed entry is required.
 
 Do note that all files are assumed to use UTF-8 encoding.
 
