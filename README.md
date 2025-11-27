@@ -1,10 +1,10 @@
 # Dependency Search &middot; [![npm](https://img.shields.io/npm/v/npm.svg?style=flat-square)](https://www.npmjs.com/package/npm) [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square)](https://github.com/your/your-project/blob/master/LICENSE) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-blue.svg)](https://standardjs.com)
 
-A tool that identifies node.js projects that make use of (directly or indirectly) one or more user specifiable packages.
+A CLI node.js tool that identifies node.js projects that (directly or indirectly) make use of one or more user specifiable packages.
 
-It searches a directory (and any descendant directories) for package.json files, and then examines the dependencies/devDependencies sections for target packages.
+It searches a directory (and any descendant directories) for package.json files, and then examines the dependencies/devDependencies sections in each of those files for any of the target packages.
 
-The target packages are specified in a text file containing one or more lines, each consisting of a package name (as in the name in a package.json's dependencies/devDependencies block), followed by an '@', followed by the version you're looking for (so for example 'chai@6.2.1').  Be aware that a minimum of one well-formed entry is required.
+Those target packages are specified in a text file containing one or more lines, each consisting of a package name (as in the name in a package.json's dependencies/devDependencies block), followed by an '@', followed by the version you're looking for (so for example 'chai@6.2.1').
 
 Do note that all files are assumed to use UTF-8 encoding.
 
@@ -28,13 +28,13 @@ chai@6.2.1
 @semantic-release/git@10.0.1
 ```
 
-...and your projects were under the `c:\projects` directory. If you execute the following command...
+...and your projects were under the `c:\projects` directory, you can execute a search via the following command...
 
 ```
 npm run start -- c:\dependencies.txt c:\projects
 ```
 
-You will get output looking something like this...
+...which will result in output looking something like this...
 
 ```
 "C:\Program Files\nodejs\npm.cmd" run start -- c:\dependencies.txt c:\projects
