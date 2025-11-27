@@ -10,6 +10,18 @@ Do note that all files are assumed to use UTF-8 encoding.
 
 ## Usage
 
+First clone the repository via the usual git command...
+
+```
+git clone https://github.com/wmfs/dependency-search.git
+```
+
+Then fetch the required dependencies using npm...
+
+```
+npm i
+```
+
 You can execute the tool using the following command...
 
 ```
